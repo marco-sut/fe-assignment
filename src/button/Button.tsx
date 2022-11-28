@@ -17,4 +17,36 @@
 // We are using css modules in this project, so you can add styles from the button module file with styles[className] - https://github.com/css-modules/css-modules
 // You may add any helper libraries you need
 
-export const Button = () => {};
+import { forwardRef } from 'react';
+import clsx from 'clsx';
+
+import styles from './_button.module.css';
+
+type ButtonVariant = 'primary' | 'secondary';
+
+interface ButtonConfig {
+  variant?: ButtonVariant;
+}
+
+export type ButtonProps = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+> & ButtonConfig;
+
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+  const {
+    variant = 'primary',
+    type = 'button',
+    className,
+    children,
+    ...rest
+  } = props;
+
+  const merged = clsx(styles.button, styles[variant], className);
+
+  return (
+    <button ref={ref} type={type} className={merged} {...rest}>
+      {children}
+    </button>
+  );
+});

@@ -1,7 +1,20 @@
 .App {
   display: flex;
+  flex-wrap: wrap;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  align-content: center;
   gap: 16px;
+}
+
+.my-fancy-button__primary {
+  --color-primary: #fff;
+  --color-bg-primary: #E34400;
+}
+
+.my-fancy-button__secondary {
+  --color-secondary: #fff;
+  --color-bg-secondary: #E300EF;
+  --color-bg-secondary--hover: #FF46CE;
 }

@@ -1,10 +1,83 @@
-/* you can use these global colors */
-
 :root {
-    --color-blue: #0075E1;
-    --color-blue-light: #e6f2fd;
-    --color-grey: #8C8C8C;
-    --color-light-grey: #DADADA;
-    --color-white: white;
+  --color-primary: #fff;
+  --color-bg-primary: #0075E1;
+
+  --color-secondary: #0075E1;
+  --color-bg-secondary: #fff;
+  --color-bg-secondary--hover: #e6f2fd;
+
+  --color-bg-primary--disabled: #8C8C8C;
+  --color-primary--disabled: #DADADA;
+
+  --color-bg-secondary--disabled: #fff;
+  --color-secondary--disabled: #8C8C8C;
+  --color-secondary-border--disabled: #BFBFBF;
 }
 
+.button {
+  font-family: inherit;
+  line-height: 1.5;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  border: 2px solid;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button.primary {
+  background-color: var(--color-bg-primary);
+  color: var(--color-primary);
+  border-color: var(--color-bg-primary);
+}
+
+.button.primary:disabled {
+  background-color: var(--color-bg-primary--disabled);
+  color: var(--color-primary--disabled);
+  border-color: var(--color-bg-primary--disabled);
+}
+
+.button.primary svg path {
+  fill: var(--color-primary);
+}
+
+.button.primary:disabled svg path {
+  fill: var(--color-primary--disabled);
+}
+
+.button.secondary {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.button.secondary:hover,
+.button.secondary:focus,
+.button.secondary:active {
+  background-color: var(--color-bg-secondary--hover);
+}
+
+.button.secondary:disabled {
+  background-color: var(--color-bg-secondary--disabled);
+  color: var(--color-secondary--disabled);
+  border-color: var(--color-secondary-border--disabled);
+}
+
+.button.secondary svg path {
+  fill: var(--color-secondary);
+}
+
+.button.secondary:disabled svg path {
+  fill: var(--color-secondary--disabled);
+}
