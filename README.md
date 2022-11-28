@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# EF Global Creative Frontend Dev assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a basic Create React App project with Typescript, in which we'd like you to build a button component.
+
+We have set up a folder at 'src/button', with a boilerplate Button.tsx file containing the requirements for the button component we want you to build.
+
+There is also a png showing what the variants should look like. You can use the default font for simplicity.
 
 ## Available Scripts
 
@@ -8,7 +12,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
